@@ -1,3 +1,233 @@
-html{
-    font-size: 16px;
+:root{
+    --color-primary:#673ab7 ;/*deep-purple*/
+    --color-secondary:#7e57c2;/*deep-purple lighten-1*/
+    --color-accent: #5346b6;/*deep-purple*/
+    --color-headings:#fff;/*deep-purple*/
+    --color-body:#81c28169;/*deep-purple*/
 }
+
+/*typography*/
+
+html {
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Inter' ,Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    color: var(--color-body);
+
+}
+h1,h2,h3{
+    color: var(--color-headings);
+    margin-bottom: 1rem;
+}
+h1{
+    font-size: 7rem;
+}
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3rem;
+    
+}
+p{
+    color: #fff;
+    margin-top:0;
+
+}
+@media screen and (min-width:1024px){
+    body{
+        font-size:1.8rem;
+
+    }
+    h1{
+        font-size: 8rem;
+
+    }
+    h2{
+        font-size: 4rem;
+    }
+    h3{
+        font-size: 2.4rem;
+    }
+}
+@media screen and (min-width:480px){
+    body{
+        font-size:1rem;
+
+    }
+    h1{
+        font-size: 2rem;
+
+    }
+    h2{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: 2rem;
+    }
+}
+
+/*links*/
+a{
+    text-decoration:none;
+}
+.link-arrow{
+    color:var(--color-accent);
+    text-transform: uppercase;
+    font-size:2rem;
+    font-weight: bold;
+    
+}
+.link-arrow::after{
+    content : '-->';
+    margin-left: 5px;
+    transition: margin 0.15s;
+}
+.link-arrow:hover::after{
+    margin-left:10px;
+}
+
+/*List*/
+
+/*Buttons*/
+.--btn-primary-text{
+    color: var(--color-accent);
+}
+.btn-secondary{
+    color: var(--color-secondary);
+}
+/*Hero*/
+.hero{
+    background-color: #aed581 ;
+    margin:0;
+    padding: 2rem;
+    
+}
+.hero__header > h2{
+    font-weight: bold;
+}
+
+.hero__header > h2, p{
+    text-align: center;
+}
+.hero__header > a {
+    left: 35%
+}
+.hero__image{
+    width: 550px;
+    height: 350px;
+    margin-left:-3.5rem;
+
+}
+
+.hero__header{
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateX(-48px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateX(-26px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateX(-13px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateX(-6.5px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateX(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87%,
+	98% {
+		animation-timing-function: ease-out;
+		transform: translateX(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+@media screen and (min-width:370px){
+    
+    .hero__image{
+        margin-left: -0.5rem;
+    }
+
+@media screen and (min-width:540px){
+    
+    .hero__header > a {
+        left:37%
+    }
+    
+}
+@media screen and (min-width:600px){
+    
+    .hero__header > a {
+        
+        left:40%
+    }
+    .hero__image{
+        margin-left: 4.5rem;
+    }
+}
+@media screen and (min-width:900px){
+    .hero{
+        background-color: #aed581 ;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .hero__header > p{
+        font-size: 1.4rem;
+        
+    }
+    .hero__header > h2{
+        
+        font-size:4 rem;
+    }
+    .hero__header > h2, p{
+        
+        text-align: left;
+    }
+    .hero__header > a {
+        left: 0%
+    }
+    
+}
+
+.hero__body > h2{
+
+    text-align: center;
+}
+
+
