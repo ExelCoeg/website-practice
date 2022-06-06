@@ -1,11 +1,49 @@
 :root{
-    --color-primary:#673ab7 ;/*deep-purple*/
-    --color-secondary:#7e57c2;/*deep-purple lighten-1*/
-    --color-accent: #5346b6;/*deep-purple*/
-    --color-headings:#fff;/*deep-purple*/
-    --color-body:#81c28169;/*deep-purple*/
+    --color-primary:#aed581 ;
+    --color-secondary:#7ec131;
+    --color-accent: #5346b6;
+    --color-headings:#fff;
+    --color-body:#fff;
 }
 
+.tracking-in-contract-bck-bottom {
+	-webkit-animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-contract-bck-bottom {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px) translateY(300px);
+              transform: translateZ(400px) translateY(300px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract-bck-bottom {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px) translateY(300px);
+              transform: translateZ(400px) translateY(300px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  
 /*typography*/
 
 html {
@@ -93,22 +131,38 @@ a{
     margin-left:10px;
 }
 
+
+
+
+
 /*List*/
 .list{
-    
-    list-style:none; 
-    padding-left: 0;
+    background:var(--color-primary);
+    list-style: none; 
 
 }
+
 .list__item{
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--color-accent);
     
-    color : var(--color-headings);
-    font-size: 2rem;
 }
+
 .list__item{
-    
-    text-align: center;;
+    text-align: center;
 }
+
+.list__item::before{
+    content:"•   ";
+    color:var(--color-accent);
+}
+
+
+
+
+
+
 
 
 
@@ -119,6 +173,10 @@ a{
 .btn-secondary{
     color: var(--color-secondary);
 }
+
+
+
+
 /*Hero*/
 .hero{
     background-color: #aed581 ;
