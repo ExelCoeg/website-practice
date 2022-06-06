@@ -6,44 +6,44 @@
     --color-body:#fff;
 }
 
-.tracking-in-contract-bck-bottom {
-	-webkit-animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+.animated {
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-top:20px;
+    margin-bottom:10px;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+ }
+
+@keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }   
+ .fadeInLeft {
+    animation-name: fadeInLeft;
 }
 
-@-webkit-keyframes tracking-in-contract-bck-bottom {
+@keyframes fadeInDown {
     0% {
-      letter-spacing: 1em;
-      -webkit-transform: translateZ(400px) translateY(300px);
-              transform: translateZ(400px) translateY(300px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
+       opacity: 0;
+       transform: translateY(-20px);
     }
     100% {
-      -webkit-transform: translateZ(0) translateY(0);
-              transform: translateZ(0) translateY(0);
-      opacity: 1;
+       opacity: 1;
+       transform: translatey(0);
     }
-  }
-  @keyframes tracking-in-contract-bck-bottom {
-    0% {
-      letter-spacing: 1em;
-      -webkit-transform: translateZ(400px) translateY(300px);
-              transform: translateZ(400px) translateY(300px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      -webkit-transform: translateZ(0) translateY(0);
-              transform: translateZ(0) translateY(0);
-      opacity: 1;
-    }
-  }
-  
+ }   
+ .fadeInDown {
+    animation-name: fadeInDown;
+}
+
 /*typography*/
 
 html {
@@ -139,7 +139,8 @@ a{
 .list{
     background:var(--color-primary);
     list-style: none; 
-
+    margin: 0;
+    padding-bottom: 5rem;
 }
 
 .list__item{
@@ -165,7 +166,6 @@ a{
 
 
 
-
 /*Buttons*/
 .--btn-primary-text{
     color: var(--color-accent);
@@ -173,8 +173,6 @@ a{
 .btn-secondary{
     color: var(--color-secondary);
 }
-
-
 
 
 /*Hero*/
@@ -204,17 +202,31 @@ a{
     left: 35%
 }
 
-.hero__header{
-    animation: myAnim 2s ease 0s 1 normal forwards;
+.hero_body{
+    background:var(--color-primary)
+}
+.hero__body > h2{
+    margin: 0;
+    padding-bottom:5rem;
+    text-align:center;
+    background:var(--color-primary);   
 }
 .hero__image{
     max-width: 500px;
     height: auto;
     margin-left: 5rem;
-   
-    
 }
-@keyframes myAnim {
+
+.hero__header{
+    /* animation: myAnim 2s ease 0s 1 normal forwards; */
+    -webkit-animation-duration: 10s;
+   animation-duration: 10s;
+    -webkit-animation-fill-mode: both;
+     animation-fill-mode: both;
+}
+
+ 
+/* @keyframes myAnim {
 	0% {
 		animation-timing-function: ease-in;
 		opacity: 1;
@@ -259,7 +271,7 @@ a{
 		opacity: 1;
 		transform: translateX(0px);
 	}
-}
+*/
 
 
 @media screen and (max-width:800px){
@@ -285,6 +297,6 @@ a{
         max-width: 500px; 
     }
     
-}
+} 
 
 
