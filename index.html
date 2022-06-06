@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@600&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
     <!-- Compiled and minified CSS -->
@@ -17,7 +18,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Practice</title>
@@ -37,12 +37,19 @@
     </div>
       <div class="hero__body">
         <h2>I am passionate about:</h2>
-        <ul class="list">
-          <li class="list__item animated fadeInDown">Web Development</li>
-          <li class="list__item animated fadeInDown">Game Development</li>
-          <li class="list__item animated fadeInDown">Informatics Olympiad</li>
+        <ul class="list" data-aos="fade-up">
+          <li class="list__item ">Web Development</li>
+          <li class="list__item ">Game Development</li>
+          <li class="list__item ">Informatics Olympiad</li>
         </ul>
       </div>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          offset:300,
+          duration:1000
+        });
+      </script>
       <script src="js/main.js"></script>
   </body>
 </html>
