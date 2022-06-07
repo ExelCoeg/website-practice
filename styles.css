@@ -120,6 +120,7 @@ p{
 a{
     text-decoration:none;
 }
+
 .link-arrow{
     color:var(--color-accent);
     text-transform: uppercase;
@@ -145,33 +146,31 @@ a{
     padding-bottom: 5rem;
 }
 .list__item{
+    font-weight: bold;
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    
+}
+.list__item > a{
     color: var(--color-accent);
 
 }
-.list__item{
-    font-weight: bold;
-    font-size: 3rem;
-    padding-bottom: 2rem;
-    
-    
-}
+
 
 .list__item{
     text-align: center;
 }
-
-.list__item::before{
+.list__item > a:hover{
+    color:#ffffff;
+    transition: color 0.5s;
+}
+.list__item > a::before{
     content:"•   ";
     color:var(--color-accent);
 }
 
 /*Buttons*/
-.--btn-primary-text{
-    color: var(--color-accent);
-}
-.btn-secondary{
-    color: var(--color-secondary);
-}
+
 
 
 /*Hero*/
