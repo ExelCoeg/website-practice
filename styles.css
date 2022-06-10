@@ -9,8 +9,8 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    
-    background: #aed581;
+    background: rgb(174,213,129);
+    background: linear-gradient(90deg, rgba(174,213,129,1) 49%, rgba(174,213,129,0.40379901960784315) 100%);    
 }
 
 .animated {
@@ -138,7 +138,6 @@ a{
     margin-left:10px;
 }
 
-
 /*List*/
 .list{
     
@@ -148,7 +147,7 @@ a{
 }
 .list__item{
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3.8rem;
     padding-bottom: 2rem;
     
 }
@@ -184,6 +183,7 @@ a{
     display:flex;
     align-content: center;
     justify-content: center;
+    
 }
 
 .hero__body > h2{
@@ -202,7 +202,7 @@ a{
 }
 .hero__container > p{
     
-    font-size: 1.4rem;
+    font-size: 2rem;
 }
 
 .hero__header > a {
@@ -244,9 +244,38 @@ a{
         max-width: 350px; 
     }
     .hero__list > li{
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     
 } 
 
+.about-me{
+    text-align:center;
+    background: #fff;
+    padding: 5.5rem 15rem 5.5rem 15rem;
+}
 
+.about-me > h3{
+    color: var(--color-secondary);
+}
+.about-me > h3{
+    font-weight: bold;
+    padding-bottom : 1rem;
+}
+.about-me p{
+    color: var(--color-accent);
+
+}
+.about-me p {
+    font-size: 1.5rem;
+
+}
+@media screen and (max-width:800px){
+    .about-me{
+        padding: 5.5rem 5rem 5.5rem 5rem;
+    }
+    .about-me p{
+        font-size: 1.3rem;
+    }
+
+}
