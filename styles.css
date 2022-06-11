@@ -279,3 +279,11 @@ a{
     }
 
 }
+/*Navigation bar */
+
+.brand-logo > img{
+    margin-top: 5px;
+    max-width: 55px;
+    height: auto;
+}
+
